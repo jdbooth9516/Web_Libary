@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<main>
+    <section>
+        <h3>{{ article.title }}</h3>
+        <article>
+            <p>{{ article.text | linebreaks }}</p>
+        </article>
+        <a href="{% url 'article_edit' article.pk %}" class="btn btn-primary btn-lg">Edit Article</a>
+        <a href="{% url 'article_delete' article.pk %}" class="btn btn-primary btn-sm">Delete Article</a>
+    </section>
+</main>
+
+{% endblock content %}
+
+
